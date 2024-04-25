@@ -160,21 +160,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="icon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="security.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="shield.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="letter-v.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="viettel-2021_1.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="slogan.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

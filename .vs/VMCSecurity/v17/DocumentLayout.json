@@ -1,20 +1,20 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Project\\MTQS\\source\\VMCSecurit-11-04-24\\VMCSecurit-11-04-24\\VMCSecurity\\",
+  "WorkspaceRootPath": "E:\\Project\\MTQS\\Update\\vmc-security\\",
   "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{EE8807FB-A62D-4BEB-B42F-3E13FB2E3F0B}|VMCSecurity\\VMCSecurity.csproj|e:\\project\\mtqs\\source\\vmcsecurit-11-04-24\\vmcsecurit-11-04-24\\vmcsecurity\\vmcsecurity\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE8807FB-A62D-4BEB-B42F-3E13FB2E3F0B}|VMCSecurity\\VMCSecurity.csproj|solutionrelative:vmcsecurity\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE8807FB-A62D-4BEB-B42F-3E13FB2E3F0B}|VMCSecurity\\VMCSecurity.csproj|E:\\Project\\MTQS\\source\\VMCSecurit-11-04-24\\VMCSecurit-11-04-24\\VMCSecurity\\vmcsecurity\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{EE8807FB-A62D-4BEB-B42F-3E13FB2E3F0B}|VMCSecurity\\VMCSecurity.csproj|solutionrelative:vmcsecurity\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|VMCSecurity||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE8807FB-A62D-4BEB-B42F-3E13FB2E3F0B}|VMCSecurity\\VMCSecurity.csproj|e:\\project\\mtqs\\source\\vmcsecurit-11-04-24\\vmcsecurit-11-04-24\\vmcsecurity\\vmcsecurity\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+      "AbsoluteMoniker": "D:0:0:{EE8807FB-A62D-4BEB-B42F-3E13FB2E3F0B}|VMCSecurity\\VMCSecurity.csproj|E:\\Project\\MTQS\\Update\\vmc-security\\vmcsecurity\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EE8807FB-A62D-4BEB-B42F-3E13FB2E3F0B}|VMCSecurity\\VMCSecurity.csproj|solutionrelative:vmcsecurity\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE8807FB-A62D-4BEB-B42F-3E13FB2E3F0B}|VMCSecurity\\VMCSecurity.csproj|e:\\project\\mtqs\\update\\vmc-security\\vmcsecurity\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE8807FB-A62D-4BEB-B42F-3E13FB2E3F0B}|VMCSecurity\\VMCSecurity.csproj|solutionrelative:vmcsecurity\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE8807FB-A62D-4BEB-B42F-3E13FB2E3F0B}|VMCSecurity\\VMCSecurity.csproj|e:\\project\\mtqs\\update\\vmc-security\\vmcsecurity\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,7 +24,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -36,23 +36,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "VMCSecurity",
-              "DocumentMoniker": "E:\\Project\\MTQS\\source\\VMCSecurit-11-04-24\\VMCSecurit-11-04-24\\VMCSecurity\\VMCSecurity\\VMCSecurity.csproj",
+              "DocumentMoniker": "E:\\Project\\MTQS\\Update\\vmc-security\\VMCSecurity\\VMCSecurity.csproj",
               "RelativeDocumentMoniker": "VMCSecurity\\VMCSecurity.csproj",
-              "ToolTip": "E:\\Project\\MTQS\\source\\VMCSecurit-11-04-24\\VMCSecurit-11-04-24\\VMCSecurity\\VMCSecurity\\VMCSecurity.csproj",
-              "RelativeToolTip": "VMCSecurity\\VMCSecurity.csproj",
+              "ToolTip": "E:\\Project\\MTQS\\Update\\vmc-security\\VMCSecurity\\VMCSecurity.csproj*",
+              "RelativeToolTip": "VMCSecurity\\VMCSecurity.csproj*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-04-22T02:06:28.306Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "E:\\Project\\MTQS\\source\\VMCSecurit-11-04-24\\VMCSecurit-11-04-24\\VMCSecurity\\VMCSecurity\\MainWindow.xaml.cs",
+              "DocumentMoniker": "E:\\Project\\MTQS\\Update\\vmc-security\\VMCSecurity\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "VMCSecurity\\MainWindow.xaml.cs",
-              "ToolTip": "E:\\Project\\MTQS\\source\\VMCSecurit-11-04-24\\VMCSecurit-11-04-24\\VMCSecurity\\VMCSecurity\\MainWindow.xaml.cs",
+              "ToolTip": "E:\\Project\\MTQS\\Update\\vmc-security\\VMCSecurity\\MainWindow.xaml.cs",
               "RelativeToolTip": "VMCSecurity\\MainWindow.xaml.cs",
               "ViewState": "AQIAAFwEAAAAAAAAAAAuwEcAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -63,9 +63,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "E:\\Project\\MTQS\\source\\VMCSecurit-11-04-24\\VMCSecurit-11-04-24\\VMCSecurity\\VMCSecurity\\MainWindow.xaml",
+              "DocumentMoniker": "E:\\Project\\MTQS\\Update\\vmc-security\\VMCSecurity\\MainWindow.xaml",
               "RelativeDocumentMoniker": "VMCSecurity\\MainWindow.xaml",
-              "ToolTip": "E:\\Project\\MTQS\\source\\VMCSecurit-11-04-24\\VMCSecurit-11-04-24\\VMCSecurity\\VMCSecurity\\MainWindow.xaml",
+              "ToolTip": "E:\\Project\\MTQS\\Update\\vmc-security\\VMCSecurity\\MainWindow.xaml",
               "RelativeToolTip": "VMCSecurity\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-04-11T08:38:47.847Z",

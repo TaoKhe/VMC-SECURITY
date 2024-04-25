@@ -2,10 +2,7 @@
 using Microsoft.Win32;
 using System;
 using System.Diagnostics;
-using System.DirectoryServices.AccountManagement;
-using System.Management;
 using System.Net.NetworkInformation;
-using System.Security.Principal;
 using System.ServiceProcess;
 using System.Threading.Tasks;
 using System.Windows;
@@ -433,47 +430,7 @@ namespace VMCSecurity
             return 0; // Trả về 0 nếu không tìm thấy giá trị
         }
 
-        /************************************************************/
-        /*        private void ReadBluetooth()
-                {
-                    // Đọc trạng thái Bluetooth bằng PowerShell
-                    string command = "Get-WindowsOptionalFeature -Online -FeatureName Bluetooth";
-
-                    ProcessStartInfo psi = new ProcessStartInfo
-                    {
-                        FileName = "powershell.exe",
-                        Arguments = $"-NoProfile -ExecutionPolicy unrestricted -Command \"{command}\"",
-                        RedirectStandardOutput = true,
-                        UseShellExecute = false,
-                        CreateNoWindow = true
-                    };
-                    try
-                    {
-                        Process process = Process.Start(psi);
-                        string output = process.StandardOutput.ReadToEnd();
-                        process.WaitForExit();
-
-                        if (output.Contains("State : Enabled"))
-                        {
-                            //Console.WriteLine("Bluetooth đã được bật.");
-                            setButton(iconBluetoothAllow, textBluetoothAllow, iconBluetoothBlock, textBluetoothBlock, ref isEnableBluetoothDevice, true); //allowed
-                        }
-                        else if (output.Contains("State : Disabled"))
-                        {
-                            //Console.WriteLine("Bluetooth đã được tắt.");
-                            setButton(iconBluetoothAllow, textBluetoothAllow, iconBluetoothBlock, textBluetoothBlock, ref isEnableBluetoothDevice, false); //blocked
-                        }
-                        else
-                        {
-                            Console.WriteLine("Không thể đọc trạng thái Bluetooth.");
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("Lỗi: " + ex.Message);
-                    }
-                }
-        */
+        /************************************************************************************************************/
 
         private void ReadBluetooth()
         {
@@ -586,11 +543,13 @@ namespace VMCSecurity
 
             if (isEnableWebcamDevice)
             {
-                SetCameraAccessValue(1); // Cho phép người dùng local sử dụng camera
+                // Cho phép người dùng local sử dụng camera
+                SetCameraAccessValue(1);
             }
             else
             {
-                SetCameraAccessValue(2); // Chặn người dùng local sử dụng camera
+                // Chặn người dùng local sử dụng camera
+                SetCameraAccessValue(2);
             }
 
             if (isEnableBluetoothDevice)
@@ -817,7 +776,6 @@ namespace VMCSecurity
         }
 
         /***********************************************************************/
-
         private void EnableTapeDrives(bool value)
         {
             RegistryKey key = Registry.LocalMachine.CreateSubKey("SOFTWARE\\Policies\\Microsoft\\Windows\\RemovableStorageDevices\\{53f5630b-b6bf-11d0-94f2-00a0c91efb8b}", true);

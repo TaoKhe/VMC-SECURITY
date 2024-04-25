@@ -1,2 +1,0 @@
-# vmcsecurity
-Fix Bluetooth + Camera

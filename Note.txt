@@ -1,2 +1,3 @@
 Fix BlueTooth
 Fix Camera
+Fix Slogan Viettel

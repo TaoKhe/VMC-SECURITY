@@ -1,0 +1,479 @@
+﻿<Window x:Class="VMCSecurity.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VMCSecurity"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+         TextElement.FontWeight="Regular"
+         TextElement.FontSize="13"
+         TextOptions.TextFormattingMode="Ideal"
+         TextOptions.TextRenderingMode="Auto"
+         Background="{DynamicResource MaterialDesignPaper}"
+         FontFamily="{DynamicResource MaterialDesignFont}"
+        mc:Ignorable="d"
+        Title="Phần mềm bảo mật chống truy cập "  Height="1683" Width="730" ResizeMode="NoResize" x:Name="ThisMainWindow">
+
+    <Grid Width="715">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="1638*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Width="715" Grid.RowSpan="2">
+            <StackPanel Orientation="Vertical" Height="1500" VerticalAlignment="Top">
+                <Button Name="btn1" Content="Ổ đĩa CD/DVD" Width="150" Height="40" Click="Button_Click_1" Margin="5,2,5,2" FontSize="16"/>
+                <Button Name="btn2" Content="Thiết bị lưu trữ" Width="150" Height="40" Click="Button_Click_2" Margin="5,2,5,2" FontSize="16"/>
+                <Button Name="btn3" Content="Thiết bị mở rộng" Width="150" Height="40" Click="Button_Click_3" Margin="5,2,5,2" FontSize="16"/>
+                <Button Name="btn4" Content="Cài đặt mạng" Width="150" Height="40" Click="Button_Click_4" Margin="5,2,5,2" FontSize="16"/>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Top">
+                <GroupBox x:Name="groupBoxCD" Width="536" Height="370" FontSize="16" FontWeight="Bold" Foreground="White">
+                    <GroupBox.Header>
+                        <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Height="20" Padding="0" Content="CD/DVD"/>
+                    </GroupBox.Header>
+                    <StackPanel VerticalAlignment="Top">
+                        <Rectangle Height="40"/>
+
+                        <!--CD Write-->
+                        <ContentControl HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Width="30"/>
+                                <Label Content="Ghi dữ liệu" Width="120" FontSize="16" VerticalAlignment="Center"/>
+                                <Rectangle Width="50"/>
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnCdWriteAllow" Click="BtnCdWriteAllow_Click">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconCdWriteAllow" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Cho phép" FontSize="16" Width="77" x:Name="textCdWriteAllow"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Rectangle Width="40"/>
+
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnCdWriteBlock" Click="BtnCdWriteBlock_Click">
+                                    <StackPanel Orientation="Horizontal" >
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconCdWriteBlock" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Khóa" FontSize="16" Width="77" x:Name="textCdWriteBlock"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                        </ContentControl>
+                        <Rectangle Height="10"/>
+
+
+                        <!--CD Read-->
+                        <ContentControl HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Width="30"/>
+                                <Label Content="Đọc dữ liệu" Width="120" FontSize="16" VerticalAlignment="Center"/>
+                                <Rectangle Width="50"/>
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnCdReadAllow" Click="BtnCdReadAllow_Click">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconCdReadAllow" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Cho phép" FontSize="16" Width="77" x:Name="textCdReadAllow"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Rectangle Width="40"/>
+
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnCdReadBlock" Click="BtnCdReadBlock_Click">
+                                    <StackPanel Orientation="Horizontal" >
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconCdReadBlock" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Khóa" FontSize="16" Width="77" x:Name="textCdReadBlock"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                        </ContentControl>
+                        <Rectangle Height="10"/>
+
+
+                        <!--CD Excute-->
+                        <ContentControl HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Width="30"/>
+                                <Label Content="Quyền truy cập" Width="120" FontSize="16" VerticalAlignment="Center"/>
+                                <Rectangle Width="50"/>
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnCdExcuteAllow" Click="BtnCdExcuteAllow_Click" IsEnabled="True">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconCdExcuteAllow" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Cho phép" FontSize="16" Width="77" x:Name="textCdExcuteAllow"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Rectangle Width="40"/>
+
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnCdExcuteBlock" Click="BtnCdExcuteBlock_Click">
+                                    <StackPanel Orientation="Horizontal" >
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconCdExcuteBlock" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Khóa" FontSize="16" Width="77" x:Name="textCdExcuteBlock"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                        </ContentControl>
+
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox x:Name="groupBoxStorageDevices" Width="536"  Height="370" FontSize="16">
+                    <GroupBox.Header>
+                        <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Height="20" Padding="0" FontWeight="Bold" Content="Các thiết bị lưu trữ dữ liệu"/>
+                    </GroupBox.Header>
+                    <StackPanel VerticalAlignment="Top">
+                        <Rectangle Height="40"/>
+
+                        <!--Removable device-->
+                        <ContentControl HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Width="30"/>
+                                <Label Content="Ổ cứng, USB" Width="120" FontSize="16" VerticalAlignment="Center"/>
+                                <Rectangle Width="50"/>
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnRemoableAllow" Click="BtnRemovableAllow_Click">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconRemovableAllow" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Cho phép" FontSize="16" Width="77" x:Name="textRemovableAllow"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Rectangle Width="40"/>
+
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnRemovableBlock" Click="BtnRemovableBlock_Click">
+                                    <StackPanel Orientation="Horizontal" >
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconRemovableBlock" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Khóa" FontSize="16" Width="77" x:Name="textRemovableBlock"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                        </ContentControl>
+                        <Rectangle Height="10"/>
+
+
+                        <!--Floppy disks-->
+                        <ContentControl HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Width="30"/>
+                                <Label Content="Ổ đĩa mềm (FDD)" Width="140" FontSize="16" VerticalAlignment="Center"/>
+                                <Rectangle Width="30"/>
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnFloppyAllow" Click="BtnFloppyAllow_Click">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconFloppyAllow" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Cho phép" FontSize="16" Width="77" x:Name="textFloppyAllow"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Rectangle Width="40"/>
+
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnFloppyBlock" Click="BtnFloppyBlock_Click">
+                                    <StackPanel Orientation="Horizontal" >
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconFloppyBlock" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Khóa" FontSize="16" Width="77" x:Name="textFloppyBlock"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                        </ContentControl>
+                        <Rectangle Height="10"/>
+
+
+                        <!--Mtp device-->
+                        <ContentControl HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Width="30"/>
+                                <Label Content="Thiết bị cầm tay (MTP)" Width="170" FontSize="16" VerticalAlignment="Center"/>
+                                <Rectangle Width="0"/>
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnMtpAllow" Click="BtnMtpAllow_Click" IsEnabled="True">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconMtpAllow" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Cho phép" FontSize="16" Width="77" x:Name="textMtpAllow"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Rectangle Width="40"/>
+
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnMtpBlock" Click="BtnMtpBlock_Click">
+                                    <StackPanel Orientation="Horizontal" >
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconMtpBlock" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Khóa" FontSize="16" Width="77" x:Name="textMtpBlock"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                        </ContentControl>
+
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox x:Name="groupBoxExternalDevices" Width="536"  Height="370" FontSize="16">
+                    <GroupBox.Header>
+                        <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Height="20" Padding="0" FontWeight="Bold" Content="Các thiết bị mở rộng"/>
+                    </GroupBox.Header>
+                    <StackPanel VerticalAlignment="Top">
+                        <Rectangle Height="40"/>
+                        <!--Printer device-->
+                        <ContentControl HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Width="30"/>
+                                <Label Content="Máy in" Width="120" FontSize="16" VerticalAlignment="Center"/>
+                                <Rectangle Width="50"/>
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnPrinterAllow" Click="BtnPrinterAllow_Click">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconPrinterAllow" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Cho phép" FontSize="16" Width="77" x:Name="textPrinterAllow"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Rectangle Width="40"/>
+
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnPrinterBlock" Click="BtnPrinterBlock_Click">
+                                    <StackPanel Orientation="Horizontal" >
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconPrinterBlock" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Khóa" FontSize="16" Width="77" x:Name="textPrinterBlock"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                        </ContentControl>
+                        <Rectangle Height="10"/>
+
+
+                        <!--tape device-->
+                        <ContentControl HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Width="30"/>
+                                <Label Content="Ổ băng (Tape Drive)" Width="160" FontSize="16" VerticalAlignment="Center"/>
+                                <Rectangle Width="10"/>
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnTapeAllow" Click="BtnTapeAllow_Click">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconTapeAllow" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Cho phép" FontSize="16" Width="77" x:Name="textTapeAllow"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Rectangle Width="40"/>
+
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnTapeBlock" Click="BtnTapeBlock_Click">
+                                    <StackPanel Orientation="Horizontal" >
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconTapeBlock" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Khóa" FontSize="16" Width="77" x:Name="textTapeBlock"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                        </ContentControl>
+                        <Rectangle Height="10"/>
+
+                        <!--camera-->
+                        <ContentControl HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Width="30"/>
+                                <Label Content="Webcam" Width="120" FontSize="16" VerticalAlignment="Center"/>
+                                <Rectangle Width="50"/>
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnWebcamAllow" Click="BtnWebcamAllow_Click" IsEnabled="True">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconWebcamAllow" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Cho phép" FontSize="16" Width="77" x:Name="textWebcamAllow"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Rectangle Width="40"/>
+
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnWebcamBlock" Click="BtnWebcamBlock_Click">
+                                    <StackPanel Orientation="Horizontal" >
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconWebcamBlock" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Khóa" FontSize="16" Width="77" x:Name="textWebcamBlock"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                        </ContentControl>
+                        <Rectangle Height="10"/>
+
+                        <!--bluetooth-->
+                        <ContentControl HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Width="30"/>
+                                <Label Content="Bluetooth" Width="120" FontSize="16" VerticalAlignment="Center"/>
+                                <Rectangle Width="50"/>
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnBluetoothAllow" Click="BtnBluetoothAllow_Click" IsEnabled="True">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconBluetoothAllow" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Cho phép" FontSize="16" Width="77" x:Name="textBluetoothAllow"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Rectangle Width="40"/>
+
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnBluetoothBlock" Click="BtnBluetoothBlock_Click">
+                                    <StackPanel Orientation="Horizontal" >
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconBluetoothBlock" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Khóa" FontSize="16" Width="77" x:Name="textBluetoothBlock"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                        </ContentControl>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox x:Name="groupBoxNetwork" Width="536"  Height="370" FontSize="16">
+                    <GroupBox.Header>
+                        <Label Foreground="White" FontSize="18" HorizontalAlignment="Center" Height="20" Padding="0" FontWeight="Bold" Content="Cài đặt mạng"/>
+                    </GroupBox.Header>
+                    <StackPanel VerticalAlignment="Top">
+                        <Rectangle Height="40"/>
+                        <!--LAN-->
+                        <ContentControl HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Width="30"/>
+                                <Label Content="Truy cập LAN" Width="120" FontSize="16" VerticalAlignment="Center"/>
+                                <Rectangle Width="50"/>
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnLanAllow" Click="BtnLanAllow_Click" IsEnabled="True">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconLanAllow" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Cho phép" FontSize="16" Width="77" x:Name="textLanAllow"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Rectangle Width="40"/>
+
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnLanBlock" Click="BtnLanBlock_Click">
+                                    <StackPanel Orientation="Horizontal" >
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconLanBlock" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Khóa" FontSize="16" Width="77" x:Name="textLanBlock"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                        </ContentControl>
+                        <Rectangle Height="10"/>
+
+                        <!--wifi -->
+                        <ContentControl HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Width="30"/>
+                                <Label Content="Truy cập Wi-Fi" Width="120" FontSize="16" VerticalAlignment="Center"/>
+                                <Rectangle Width="50"/>
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnWifiAllow" Click="BtnWifiAllow_Click" IsEnabled="True">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconWifiAllow" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Cho phép" FontSize="16" Width="77" x:Name="textWifiAllow"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Rectangle Width="40"/>
+
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="120" Foreground="#DDFFFFFF" Height="35" x:Name="BtnWifiBlock" Click="BtnWifiBlock_Click">
+                                    <StackPanel Orientation="Horizontal" >
+                                        <Rectangle Width="5"/>
+                                        <materialDesign:PackIcon x:Name="iconWifiBlock" Kind="CheckboxBlankOutline" Foreground="Wheat" Width="28" Height="28"/>
+                                        <Rectangle Width="5"/>
+                                        <Label Content="Khóa" FontSize="16" Width="77" x:Name="textWifiBlock"/>
+                                        <Rectangle Width="5"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                        </ContentControl>
+                    </StackPanel>
+                </GroupBox>
+
+                <!--Thiet bi mo rong-->
+
+                <!--Network -->
+
+                <Rectangle Height="12"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <!--button save-->
+                    <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="150" Background="Red" Height="35" x:Name="BtnSave" Click="Button_Click" BorderBrush="#FF1A45AF">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Rectangle Width="5"/>
+                            <materialDesign:PackIcon x:Name="iconSave" Kind="ContentSaveAddOutline" Foreground="Wheat" Width="28" Height="28"/>
+                            <Rectangle Width="5"/>
+                            <Label Content="Lưu thay đổi" FontSize="16" Foreground="#DDFFFFFF" x:Name="textSave"/>
+                            <Rectangle Width="5"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Rectangle Width="50"/>
+                    <!--button cancel-->
+                    <Button Style="{StaticResource MaterialDesignFlatButton}" Padding="0" Width="150" Background="Red" Height="35" x:Name="BtnCancel" Click="BtnCancel_Click">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Rectangle Width="5"/>
+                            <materialDesign:PackIcon x:Name="iconCancel" Kind="CancelCircleOutline" Foreground="Wheat" Width="28" Height="28"/>
+                            <Rectangle Width="5"/>
+                            <Label Content="Hủy thay đổi" FontSize="16" Foreground="#DDFFFFFF" x:Name="textCancel"/>
+                            <Rectangle Width="5"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+                <Rectangle Width="5"/>
+                <Label Content="Bản quyền thuộc về Tổng công ty sản xuất thiết bị Viettel" Width="562" Background="White" Foreground="#DDFF0000" FontStyle="Italic" FontSize="14" Height="30"/>
+                <Rectangle Width="5"/>
+
+            </StackPanel>
+
+        </StackPanel>
+
+        <materialDesign:Badged HorizontalAlignment="Center"/>
+
+    </Grid>
+
+</Window>
